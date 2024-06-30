@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react'
 import Input from '../Components/Input'
-import InfoForm from './AddProductPage'
 import ThemePage from './ThemePage'
+import AddProductPage from './AddProductPage'
 
 function AddCategoryPage() {
   const [categoryPage , setCategoryPage] = useState(true)
@@ -26,7 +26,7 @@ function AddCategoryPage() {
     {
     categoryPage &&(
     <div className="bg-gray-300 flex items-center justify-center min-h-screen">
-      <div className=" relative my-3 h-[90vh] bg-white bg-opacity-80 backdrop-blur-sm shadow-lg rounded-lg p-3">
+      <div className=" relative my-3 w-[70rem] h-[90vh] bg-white bg-opacity-80 backdrop-blur-sm shadow-lg rounded-lg p-3">
 
         <div className=" mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl py-1 sm:py-2 lg:max-w-none lg:py-3">
@@ -92,7 +92,7 @@ function AddCategoryPage() {
 }
     {
       productPage && 
-      <InfoForm/>
+      <AddProductPage/>
     }
     {
       themePage && 
