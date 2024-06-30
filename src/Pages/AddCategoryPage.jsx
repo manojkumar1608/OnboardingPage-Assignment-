@@ -1,13 +1,30 @@
 
 import React, { useState } from 'react'
 import Input from '../Components/Input'
+import InfoForm from './AddProductPage'
+import ThemePage from './ThemePage'
 
-function CategoryForm() {
+function AddCategoryPage() {
+  const [categoryPage , setCategoryPage] = useState(true)
+  const [themePage , setThemePage] = useState(false)
+  const [productPage , setProductPage] = useState(false)
   const [productType, setProductType] = useState("")
   const HandleProductType = (event) => {
     setProductType(event.target.value)
   } 
+  const HandleCategoryPage = () => {
+    setProductPage(true)
+    setCategoryPage(false)
+  }
+  const HandleBackbtn = () => {
+    setThemePage(true)
+    setCategoryPage(false)
+  }
+
   return (
+    <>
+    {
+    categoryPage &&(
     <div className="bg-gray-300 flex items-center justify-center min-h-screen">
       <div className=" relative my-3 h-[90vh] bg-white bg-opacity-80 backdrop-blur-sm shadow-lg rounded-lg p-3">
 
@@ -64,14 +81,26 @@ function CategoryForm() {
         </div>
         </div>
         <div className='absolute bottom-1 left-96 '>
-          <button className='button mx-2 '>Back</button>
-          <button className={`button mx-2 ${productType === "" ? 'disabled:opacity-50 text-gray-400 bg-gray-300 cursor-not-allowed' : 'bg-blue-500 text-white'}`}
+          <button onClick={HandleBackbtn} className='button mx-2 '>Back</button>
+          <button onClick={HandleCategoryPage}
+          className={`button mx-2 ${productType === "" ? 'disabled:opacity-50 text-gray-400 bg-gray-300 cursor-not-allowed' : 'bg-blue-500 text-white'}`}
           disabled={productType === ""}>Next</button>
           
         </div>
       </div>
-    </div>
+    </div>)
+}
+    {
+      productPage && 
+      <InfoForm/>
+    }
+    {
+      themePage && 
+      <ThemePage/>
+    }
+    </>
+
   )
 }
 
-export default CategoryForm
+export default AddCategoryPage

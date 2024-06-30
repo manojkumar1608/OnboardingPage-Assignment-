@@ -1,15 +1,17 @@
 
 import './App.css'
-import CategoryForm from './Pages/CategoryForm'
-import InfoForm from './Pages/InfoForm'
-import ThemeCard from './Pages/ThemeCard'
+import CategoryForm from './Pages/AddCategoryPage'
+import FinalPage from './Pages/FinalPage'
+import InfoForm from './Pages/AddProductPage'
+import SetupStorePage from './Pages/SetupStorePage'
+import ThemeCard from './Pages/ThemePage'
 
 function App() {
   
 
   return (
     <div className='bg-slate-300'>
-      < InfoForm/>
+      < ThemeCard/>
     </div>
   )
     
