@@ -30,11 +30,11 @@ function AddCategoryPage() {
 
         <div className=" mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl py-1 sm:py-2 lg:max-w-none lg:py-3">
-            <h2 className="text-2xl font-bold text-blue-500 mb-4">Let's Customize Your Shopnix Store</h2>
+            <h2 className="text-2xl font-bold text-blue-500 mb-2">Let's Customize Your Shopnix Store</h2>
           </div>
-          <div className='flex flex-wrap'>
+          <div className='flex flex-wrap justify-between'>
           <form className='flex flex-col font-bold mr-4'>
-            <h2 className="w-[20.5em] px-3 bg-blue-200 rounded-lg p-1 text-xl font-bold text-gray-900 mb-2 mt-2">Add a Type, Category and Sub-Category</h2>
+            <h2 className="w-[20.5em] px-3 bg-blue-200 rounded-lg p-1 text-xl font-bold text-gray-900 mb-6 ">Add a Type, Category and Sub-Category</h2>
             <Input
               className="font-normal mb-4"
               label=" Product type *"
@@ -59,7 +59,7 @@ function AddCategoryPage() {
             />
           </form>
 
-        <div className='flex flex-col ml-4 p-4 bg-blue-200 font-bold rounded-xl'>
+        <div className='flex flex-col ml-4 mr-14 p-4 bg-blue-200 font-bold rounded-xl'>
           <p className='border border-gray-600 bg-orange-500 rounded-lg h-14 w-36 text-center flex items-center justify-center'>Product type</p>
           <div className='flex justify-center items-center w-36 '>
               <span className=' text-7xl'>&#x2193;</span>

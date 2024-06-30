@@ -71,7 +71,7 @@ setThemePage(false);
               <div className='flex justify-end'>
                 <button  onClick={HandleNext}
                   className={`button bg-blue-500 text-white font-semibold py-1.5 px-4 rounded-lg focus:outline-none focus:shadow-outline ${selectedThemeIndex !== null ? ''  : 'opacity-50 cursor-not-allowed'}`}
-                  disabled={!selectedThemeIndex}
+                  disabled={selectedThemeIndex == null}
                 >
                   Next
                 </button>
